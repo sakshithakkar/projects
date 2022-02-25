@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+    <h1>Welcome, Please enter a reply </h1>
+
+    <form action="/questions/:questionId/replies" method="post">
+
+        <label>Reply id</label>
+        <input type="number" name="replyId">
+        <div class="replyId error"></div>
+
+        <label>Reply</label>
+        <input type="text" name="replyBody" />
+        <div class="replyBody error"></div>
+
+        <button type="submit">Post Answer</button>
+
+    </form>
+
+<%- include('footer') -%>

@@ -1,0 +1,29 @@
+<%- include('header'); -%>
+
+    <h1>Welcome, Please enter a question </h1>
+
+    <form action="/questions" method="post">
+
+        <!-- <input type="hidden" name="id"> -->
+
+        <label>QuestionId</label>
+        <input type="number" name="questionId">
+        <div class="questionId error"></div>
+
+        <label>Question</label>
+        <input type="text" name="questionBody" />
+        <div class="questionBody error"></div>
+
+        <label for="category">Select Category</label>
+        <select name="category" id="category">
+            <option value="crypto">Crypto</option>
+            <option value="aws">AWS</option>
+            <option value="mongodb">Mongodb</option>
+        </select>
+
+        <button type="submit">Post Question</button>
+
+    </form>
+
+    
+    <%- include('footer') -%>

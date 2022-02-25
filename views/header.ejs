@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Forum</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <ul>
+      <% if(user)  { %>
+        <li>Successful Login. Welcome, <%= user.fullName %> </li>
+        <li> <a href="/logout">Logout</a></li>  
+        <li><a href="/questions">Ask / Post Question</a></li>
+        <li> <a href="/questions_list"> List of Questions </a> </li>
+        <li><a href="/reply"> Post an Answer</a></li>
+      <%  } else { %>
+        <li> <a href="/users/login">Login</a></li>
+        <li><a href="/users/signup">Signup</a></li>
+        <li><a href="/questions">Ask / Post Question</a></li>
+        <li> <a href="/questions_list"> List of Questions </a> </li>
+        <li><a href="/reply"> Post an Answer</a></li>
+      <% } %>
+  </ul>
+  </nav>
+  

@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+<h1>List of All users</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>User ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(function(user) { %>
+        <tr>
+            <td><%= user.fullName %></td>
+            <td><%= user.email %></td>
+            <td><%= user.userId %></td>
+
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include('footer'); -%>
